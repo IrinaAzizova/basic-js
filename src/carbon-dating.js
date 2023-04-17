@@ -24,7 +24,7 @@ function dateSample(sampleActivity) {
   } else {
     const act = parseFloat(sampleActivity);
 
-    if (typeof(act) != 'number' || isNaN(act) || act < 0 || act >= MODERN_ACTIVITY) {
+    if (typeof(act) != 'number' || act === Infinity || act === -Infinity || isNaN(act) || act < 0 || act >= MODERN_ACTIVITY) {
       return false;
     } else {
 
